@@ -1,10 +1,17 @@
+/*
+ This module intentionally avoids unsupported DSLs and plugins (e.g., KSP, deprecated android {} blocks).
+ Do not add annotation processors or KSP here to keep Declarative Gradle compatible.
+*/
 androidApplication {
     namespace = "org.example.app"
 
-    testing {
-        // Prevent CI build from failing when no tests are discovered in unit test tasks.
-        unitTests {
-            failOnNoDiscoveredTests = false
+    // Configure unit test task behavior without using unsupported testing{} block.
+    tasks {
+        // Disable failure when no tests are discovered and use JUnit Platform where applicable.
+        withType("Test") {
+            // For Kotlin/JVM unit tests in Android modules
+            useJUnitPlatform = true
+            failOnNoTests = false
         }
     }
 

@@ -8,6 +8,7 @@
     android:gravity="center"
     android:orientation="vertical">
 
+    <!-- Use app:tint (from res-auto) to avoid AttributePrefixUnbound on android:tint -->
     <ImageView
         android:layout_width="88dp"
         android:layout_height="88dp"
