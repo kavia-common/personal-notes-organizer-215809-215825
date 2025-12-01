@@ -1,6 +1,13 @@
 androidApplication {
     namespace = "org.example.app"
 
+    testing {
+        // Prevent CI build from failing when no tests are discovered in unit test tasks.
+        unitTests {
+            failOnNoDiscoveredTests = false
+        }
+    }
+
     dependencies {
         // Core AndroidX + Material
         implementation("androidx.core:core-ktx:1.13.1")

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PUBLIC_INTERFACE -->
+    <!-- Base "Shape" style to satisfy any references expecting a shape style.
+         Uses MaterialComponents shapeAppearance attributes when available.
+         Safe no-op if not applied to a Material component. -->
+    <style name="Shape">
+        <!-- MaterialComponents shapeAppearance (compatible with com.google.android.material:material:1.12.0) -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Ocean.Rounded.Medium</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Ocean.Rounded.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Ocean.Rounded.Large</item>
+    </style>
+
+    <!-- PUBLIC_INTERFACE -->
+    <!-- Concrete rounded shape; some references may directly use Shape.Rounded -->
+    <style name="Shape.Rounded">
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Ocean.Rounded.Medium</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Ocean.Rounded.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Ocean.Rounded.Large</item>
+    </style>
+
+    <!-- PUBLIC_INTERFACE -->
+    <!-- Size variants used by Shape / Shape.Rounded above -->
+    <style name="Shape.Rounded.Medium">
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Ocean.Rounded.Medium</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Ocean.Rounded.Medium</item>
+    </style>
+
+    <!-- PUBLIC_INTERFACE -->
+    <style name="Shape.Rounded.Large">
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Ocean.Rounded.Large</item>
+    </style>
+
+    <!-- PUBLIC_INTERFACE -->
+    <!-- Backing ShapeAppearance styles leveraging MaterialComponents shape system -->
+    <style name="ShapeAppearance.Ocean.Rounded.Medium" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/corner_radius_medium</item>
+    </style>
+
+    <!-- PUBLIC_INTERFACE -->
+    <style name="ShapeAppearance.Ocean.Rounded.Large" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/corner_radius_large</item>
+    </style>
+</resources>
