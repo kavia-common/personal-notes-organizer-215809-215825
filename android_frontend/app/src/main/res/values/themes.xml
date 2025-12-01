@@ -21,6 +21,19 @@
         <item name="toolbarStyle">@style/Widget.Ocean.Toolbar</item>
     </style>
 
+    <!-- Base rounded shape for references that use Shape.Rounded -->
+    <style name="Shape.Rounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <!-- Some resources or libraries may reference a base 'Shape' style.
+         Provide an alias that maps to the rounded base to avoid AAPT link errors. -->
+    <style name="Shape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
     <!-- Rounded shapes -->
     <style name="Shape.Rounded.Medium">
         <item name="cornerFamily">rounded</item>

@@ -10,7 +10,7 @@
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:src="@android:drawable/ic_menu_edit"
-        android:tint="@color/ocean_primary" />
+        app:tint="@color/ocean_primary" />
 
     <TextView
         android:id="@+id/title"
