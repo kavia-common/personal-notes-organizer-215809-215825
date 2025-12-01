@@ -5,16 +5,6 @@
 androidApplication {
     namespace = "org.example.app"
 
-    // Configure unit test task behavior without using unsupported testing{} block.
-    tasks {
-        // Disable failure when no tests are discovered and use JUnit Platform where applicable.
-        withType("Test") {
-            // For Kotlin/JVM unit tests in Android modules
-            useJUnitPlatform = true
-            failOnNoTests = false
-        }
-    }
-
     dependencies {
         // Core AndroidX + Material
         implementation("androidx.core:core-ktx:1.13.1")
@@ -34,5 +24,11 @@ androidApplication {
         // Coroutines
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+    }
+
+    testing {
+        dependencies {
+            implementation("junit:junit:4.13.2")
+        }
     }
 }
